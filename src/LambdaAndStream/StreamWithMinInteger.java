@@ -1,0 +1,14 @@
+package LambdaAndStream;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class StreamWithMinInteger {
+    public static void main(String[] args) {
+        List<Integer> list = Arrays.asList(1, 2, 4, 5, 6, 7, 8, 5, 43, 4);
+
+        int min = list.stream().mapToInt(Integer::intValue).min().orElse(Integer.MAX_VALUE);
+
+        System.out.println("MIN VALUE : " + min);
+    }
+}
